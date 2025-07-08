@@ -731,8 +731,7 @@
                         <p><i class="fas fa-envelope"></i> marthaseema15@gmail.com</p>
                     </div>
                     <div style="margin-top: 2rem; text-align: center;">
-                        <a href="https://raw.githubusercontent.com/ASSASSIN619007/Resume/main/Blue%20and%20Gray%20Simple%20Professional%20CV%20Resume.pdf
-" class="download-btn" onclick="downloadResume()">
+                        <a href="#" class="download-btn" onclick="downloadResume(event)">
                             <i class="fas fa-download"></i> Download Resume
                         </a>
                     </div>
@@ -796,10 +795,12 @@
         }
 
         // Download resume function
-        function downloadResume() {
+        function downloadResume(event) {
+    event.preventDefault(); // Stop the default link action
+
     const link = document.createElement('a');
     link.href = 'https://raw.githubusercontent.com/ASSASSIN619007/Resume/main/Blue%20and%20Gray%20Simple%20Professional%20CV%20Resume.pdf';
-    link.download = 'R_Kumar_Shaanu_Resume.pdf'; // what user sees when saving
+    link.download = 'R_Kumar_Shaanu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
