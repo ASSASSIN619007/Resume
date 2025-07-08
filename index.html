@@ -796,16 +796,15 @@
 
         // Download resume function
         function downloadResume() {
-        const link = document.createElement('a');
-        link.href = '/R_Kumar_Shaanu_Resume.pdf'; // relative to public folder
-        link.download = 'R_Kumar_Shaanu_Resume.pdf';
-        document.body.appendChild(link); // Firefox fix
-        link.click();
-        document.body.removeChild(link);
+    const link = document.createElement('a');
+    link.href = 'https://raw.githubusercontent.com/ASSASSIN619007/Resume/main/Blue%20and%20Gray%20Simple%20Professional%20CV%20Resume.pdf';
+    link.download = 'R_Kumar_Shaanu_Resume.pdf'; // what user sees when saving
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
-        // Optional: Show a success alert
-        alert('Your resume is downloading!');
-        }
+    alert('Resume download started!');
+}
 
         // Add typing effect to the hero title
         function typeWriter(text, element, speed = 100) {
